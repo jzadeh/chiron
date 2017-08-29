@@ -27,16 +27,18 @@ df2['client_ip'] = df2['client_ip'].map(lambda x: str(x)[4:])
 df2['server_ip'] = df2['server_ip'].map(lambda x: str(x)[4:])
 df2['mtu'] = df2['mtu'].map(lambda x:  x.lstrip('raw_mtu=langEnglishnonefreqdistHz').rstrip('=Hz'))
 df2['time'] = df2['time'].map(lambda x:  x.lstrip('').rstrip('mod=mtu,cli=mod=syn+ackmod=uptimemod=httpreqmod= httpmod=host chang'))
-df3 = pd.read_csv('nmap.out', sep=',', header=0, engine='python')
-df3.columns = ['ip','fingerprint','port','4','5','6']
-df3_modified = df3[df3.columns[:-1]]
+df3 = pd.read_csv('nmap.tsv', delimiter='\t',)
+df3.columns = ['host+fp','port']
+df3['host+fp'] = df3['host+fp'].map(lambda x:  x.lstrip('Host:').rstrip(''))
+df3['port'] = df3['port'].map(lambda x:  x.lstrip('Ports:').rstrip(''))
+#df3_modified = df3[df3.columns[:-1]]
 #df2['raw_ip'] = df2['raw_ip'].map(lambda x:  x.lstrip('asd').rstrip('mod=mtu,cli=mod=syn+ackmod=uptimemod=httpreqmod= httpmod=host chang'))
 #df2_new = df2[df2['raw_ip'].notnull()] DONT USE *Null lines*
 #df2['raw_ip'] = df2['raw_ip'].map(lambda x:  x.lstrip('').rstrip(''))
 #df2 = df2.to_csv('out.csv', index=None, encoding='utf-8')
 #To write file
 
-print (df3_modified)
+print (df3)
 
 
 #df2_pIp = df.groupby('b').count()
