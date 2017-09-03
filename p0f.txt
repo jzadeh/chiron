@@ -1,4 +1,4 @@
-[2017/08/23 22:55:40] mod=syn|cli=192.168.0.17/61407|srv=173.241.242.220/80|subj=cli|os=Mac OS X|dist=0|params=generic|raw_sig=4:64+0:0:1460:65535,5:mss,nop,ws,nop,nop,ts,sok,eol+1:df,id+:0
+[2017/08/23 22:55:40] mod=syn|cli=192.168.0.17/61407|srv=173.241.242.220/80|subj=cli|os=Mac OS X|dist=0|params=generic|
 [2017/08/23 22:55:40] mod=mtu|cli=192.168.0.17/61407|srv=173.241.242.220/80|subj=cli|link=Ethernet or modem|raw_mtu=1500
 [2017/08/23 22:55:40] mod=syn+ack|cli=192.168.0.17/61407|srv=173.241.242.220/80|subj=srv|os=???|dist=9|params=tos:0x08|raw_sig=4:55+9:0:1460:mss*20,9:mss,nop,nop,sok,nop,ws:df:0
 [2017/08/23 22:55:40] mod=mtu|cli=192.168.0.17/61407|srv=173.241.242.220/80|subj=srv|link=Ethernet or modem|raw_mtu=1500
